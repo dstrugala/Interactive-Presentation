@@ -8,8 +8,8 @@ public class Interaction : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
     public List<Image> images;
     Color c;
-    Color t;
     public int length;
+    public Text tekst;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +22,10 @@ public class Interaction : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             c.b = 255f;
             c.a = 0;
             image.GetComponent<Image>().color = c;
+            
         }
-        this.GetComponent<Text>().color = Color.black;
+
+        tekst.GetComponent<Text>().color = Color.black;
     }
 
     // Update is called once per frame
@@ -41,9 +43,7 @@ public class Interaction : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             image.GetComponent<Image>().color = c;
         }
 
-        this.GetComponent<Text>().color = Color.red;
-
-
+        tekst.GetComponent<Text>().color = Color.red;
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -54,7 +54,8 @@ public class Interaction : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             c.a = 0;
             image.GetComponent<Image>().color = c;
         }
-        this.GetComponent<Text>().color = Color.black;
+
+        tekst.GetComponent<Text>().color = Color.black;
     }
 
 }

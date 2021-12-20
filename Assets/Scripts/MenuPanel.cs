@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectManager : MonoBehaviour
+public class MenuPanel : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject _clickedAction;
     [SerializeField]
@@ -17,7 +16,7 @@ public class ProjectManager : MonoBehaviour
     void Start()
     {
         _clickedAction.SetActive(false);
-        foreach(GameObject _otherObject in _otherActions)
+        foreach (GameObject _otherObject in _otherActions)
         {
             _otherObject.SetActive(false);
         }
@@ -30,7 +29,7 @@ public class ProjectManager : MonoBehaviour
     }
 
     public void buttonClicked()
-    {   
+    {
         _menuPanel.SetActive(false);
 
         _clickedAction.SetActive(true);
@@ -40,6 +39,4 @@ public class ProjectManager : MonoBehaviour
         }
         Debug.Log("Klikniête");
     }
-
-
 }
