@@ -11,6 +11,8 @@ public class ProjectManager : MonoBehaviour
     private GameObject[] _otherActions;
     [SerializeField]
     private GameObject _menuPanel;
+    [SerializeField]
+    private GameObject _startingBoard;
 
 
     // Start is called before the first frame update
@@ -32,6 +34,7 @@ public class ProjectManager : MonoBehaviour
     public void buttonClicked()
     {   
         _menuPanel.SetActive(false);
+        _startingBoard.SetActive(false);
 
         _clickedAction.SetActive(true);
         foreach (GameObject _otherObject in _otherActions)
